@@ -12,4 +12,4 @@
 
 ### PostgreSQL
 
-* `docker-compose -f posgres.yml up -d`
+* `docker-compose -f postgres.yml up -d`
