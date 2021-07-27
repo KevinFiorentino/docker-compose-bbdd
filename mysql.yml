@@ -7,7 +7,7 @@ services:
       - '3306:3306'
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=kevin_mysql
+      - MYSQL_DATABASE=astrea-web
       - MYSQL_USER=mysql
       - MYSQL_PASSWORD=mysql
     volumes:
@@ -18,7 +18,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - PMA_HOST=mysql
-    port:
+      - UPLOAD_LIMIT=300M
+    ports:
       - '8081:80'
     depends_on:
       - mysql
